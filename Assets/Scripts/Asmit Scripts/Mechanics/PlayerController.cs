@@ -93,12 +93,22 @@ public class PlayerControl : MonoBehaviour
         if (other.name == "Stall")
         {
             isInFrontOfStall = true;
-            isInFrontOfTable = false;
         }
         else if (other.name == "Table")
         {
             isInFrontOfTable = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == "Stall")
+        {
             isInFrontOfStall = false;
+        }
+        else if (other.name == "Table")
+        {
+            isInFrontOfTable = false;
         }
     }
 }
