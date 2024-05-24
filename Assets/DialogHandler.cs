@@ -39,6 +39,6 @@ public class DialogHandler : MonoBehaviour
 
     private void Start()
     {
-        Dialog("iam kirmada", "kirmada"); 
+        Dialog("iam not kirmada", "bheem"); 
     }
 }
