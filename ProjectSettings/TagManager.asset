@@ -7,6 +7,7 @@ TagManager:
   - CharacterNameBox
   - DialogBox
   - CharacterImage
+  - CHI
   layers:
   - Default
   - TransparentFX

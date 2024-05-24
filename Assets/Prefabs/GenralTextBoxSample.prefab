@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 3487604816903305049}
   m_Layer: 5
   m_Name: CharacterFace
-  m_TagString: CharacterImage
+  m_TagString: CHI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: How long have I been working here?
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84005a910c432d64f931944becb2acb8, type: 2}
   m_sharedMaterial: {fileID: 7994861608926426081, guid: 84005a910c432d64f931944becb2acb8,
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: kirmada
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84005a910c432d64f931944becb2acb8, type: 2}
   m_sharedMaterial: {fileID: 7994861608926426081, guid: 84005a910c432d64f931944becb2acb8,
