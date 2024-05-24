@@ -11,26 +11,34 @@ public class DialogHandler : MonoBehaviour
     [SerializeField] private GameObject genralTextBox;
 
     private TMP_Text tmp;
-    private GameObject textbox;
 
-    void Dialog(string dialog)
+    void Dialog(string dialog, string character)
     {
-        var textbox = GameObject.FindWithTag("TextBox");
-        if (textbox == null)
+        var dialogbox = GameObject.FindWithTag("DialogBox");
+        if (dialogbox == null)
         {
-            var textBox = Instantiate(genralTextBox, canvas.transform);
-            tmp = textBox.GetComponentInChildren<TMP_Text>();
+            var dialogBox = Instantiate(genralTextBox, canvas.transform);
+            tmp = dialogBox.GetComponentInChildren<TMP_Text>();
             tmp.text = dialog;
+
+            var characterBox = GameObject.FindWithTag("CharacterNameBox");
+            tmp = characterBox.GetComponentInChildren<TMP_Text>();
+            tmp.text = character;
         }
         else
         {
-            tmp = textbox.GetComponentInChildren<TMP_Text>();
+            var dialogBox = GameObject.FindWithTag("DialogBox");
+            tmp = dialogBox.GetComponentInChildren<TMP_Text>();
             tmp.text = dialog;
+            
+            var characterBox = GameObject.FindWithTag("CharacterNameBox");
+            tmp = characterBox.GetComponentInChildren<TMP_Text>();
+            tmp.text = character;
         }
     }
 
     private void Start()
     {
-        Dialog("make"); 
+        Dialog("iam kirmada", "kirmada"); 
     }
 }
