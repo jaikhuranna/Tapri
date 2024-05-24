@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public int[] itemsInHand;
     void Update()
     {
-        while(Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             playerRb.AddForce(speed *  Time.deltaTime * Vector3.left, ForceMode.Acceleration);
         }
