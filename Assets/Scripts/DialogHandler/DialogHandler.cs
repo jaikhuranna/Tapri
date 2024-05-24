@@ -62,7 +62,7 @@ public class DialogHandler : MonoBehaviour
             tmp = characterBox.GetComponentInChildren<TMP_Text>();
             tmp.text = characterName;
 
-            var imager = characterBox.GetComponentInChildren<RawImage>();
+            var imager = GameObject.FindWithTag("CharacterImage").GetComponent<RawImage>();
             imager.texture = chardata[characterIndex][emoIndex];
         }
         else
@@ -76,10 +76,6 @@ public class DialogHandler : MonoBehaviour
             tmp.text = characterName;
 
             var imager = GameObject.FindWithTag("CharacterImage").GetComponent<RawImage>();
-            if (imager == null)
-            {
-                Debug.Log("kuy");
-            }
             imager.texture = chardata[characterIndex][emoIndex];
         }
     }
@@ -90,5 +86,6 @@ public class DialogHandler : MonoBehaviour
         chardata.Add(vasuliEmo); // 1
         chardata.Add(ngoEmo); // 2
         chardata.Add(oppEmo); // 3
+        Dialog("haha complete HO GAYA!!!", 0, 1);
     }
 }
