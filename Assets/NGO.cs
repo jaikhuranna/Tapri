@@ -18,6 +18,6 @@ public class NGO : MonoBehaviour
         charintexes.Add(2);
 
 
-        emoindexes.Add(1);
+        emoindexes.Add(0);
     }
 }
