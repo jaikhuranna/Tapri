@@ -29,8 +29,8 @@ public class IntroBackgroundManager : MonoBehaviour
 
     IEnumerator IntroEndingSlide()
     {
-        curtains.SetActive(true);
         yield return new WaitForSeconds(3f);
+        curtains.SetActive(true);
         SceneManager.LoadScene(2);
     }
 
