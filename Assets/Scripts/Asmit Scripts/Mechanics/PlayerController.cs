@@ -14,7 +14,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject parleGSlot;
     public GameObject arm;
     public GameObject cameraObj;
-    
+
+    public Animator animator;
 
     public CharacterController controller;
     
@@ -34,7 +35,9 @@ public class PlayerControl : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         Vector3 direction = new Vector3(horizontal, 0f, 0f);
-
+        float horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
+        animator.SetFloat("Speed", Math.Abs(horizontalMove));
+        
         if (direction.magnitude >= 0.1f)
         {
             controller.Move(direction * speed * Time.deltaTime);
