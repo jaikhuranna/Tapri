@@ -12,19 +12,22 @@ public class Vasuli : MonoBehaviour
     void Start()
     {
         //Level 1
-        dialogs.Add("Where's your boss?");//1
-        dialogs.Add("He's probably in the back.");//P1
-        dialogs.Add("Call him.");//2
+        dialogs.Add("Where's your boss?");
+        dialogs.Add("Maa chudvane gaya h");
+        dialogs.Add("Call him.");
+        dialogs.Add("");
         
 
-        charintexes.Add(1);//1
-        charintexes.Add(0);//P1
-        charintexes.Add(1);//2
+        charintexes.Add(1);
+        charintexes.Add(0);
+        charintexes.Add(1);
+        charintexes.Add(1);
         
 
-        emoindexes.Add(0);//1
-        emoindexes.Add(0);//P1
-        emoindexes.Add(0);//2
+        emoindexes.Add(0);
+        emoindexes.Add(0);
+        emoindexes.Add(0);
+        emoindexes.Add(0);
         
     }
 
