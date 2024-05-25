@@ -11,11 +11,7 @@ public class DialogHandler : MonoBehaviour
     [SerializeField] private GameObject canvas;
     [SerializeField] private GameObject genralTextBox;
     [SerializeField] private Texture empty;
-    private int i = 0;
-
-    private List<string> dialogs = new List<string>();
-    private List<int> charintexes = new List<int>();
-    private List<int> emoindexes = new List<int>();
+    public GameObject currentBox;
 
     private TMP_Text tmp;
 
@@ -59,7 +55,7 @@ public class DialogHandler : MonoBehaviour
         var dialogbox = GameObject.FindWithTag("DialogBox");
         if (dialogbox == null)
         {
-            var genral = Instantiate(genralTextBox, canvas.transform);
+            currentBox = Instantiate(genralTextBox, canvas.transform);
             var dialogBox = GameObject.FindWithTag("DialogBox");
             tmp = dialogBox.GetComponentInChildren<TMP_Text>();
             tmp.text = dialog;
@@ -92,30 +88,17 @@ public class DialogHandler : MonoBehaviour
         chardata.Add(vasuliEmo); // 1
         chardata.Add(ngoEmo); // 2
         chardata.Add(oppEmo); // 3
-
-        dialogs.Add("Make");
-        dialogs.Add("How");
-        dialogs.Add("W");
-        dialogs.Add("idk");
-
-        charintexes.Add(0);
-        charintexes.Add(0);
-        charintexes.Add(0);
-        charintexes.Add(0);
-
-        emoindexes.Add(2);
-        emoindexes.Add(0);
-        emoindexes.Add(1);
-        emoindexes.Add(1);
-        
     }
 
-    private void Update()
+    public void CloseDialog()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && i < 4)
+        if (currentBox == null)
         {
-            Dialog(dialogs[i], charintexes[i], emoindexes[i]);
-            i++;
+            Debug.LogWarning("No box to close!");
+        }
+        else
+        {
+            Destroy(currentBox);
         }
     }
 }
