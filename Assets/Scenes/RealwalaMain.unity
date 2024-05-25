@@ -327,26 +327,6 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092344098}
-    - target: {fileID: 2646883991111828531, guid: a9ecc5cc0022333488b11703be915afa,
-        type: 3}
-      propertyPath: oppEmo.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2646883991111828531, guid: a9ecc5cc0022333488b11703be915afa,
-        type: 3}
-      propertyPath: oppEmo.Array.data[1]
-      value: 
-      objectReference: {fileID: 2800000, guid: 0e7f064c63025b04e8f5c52fa93df4d6, type: 3}
-    - target: {fileID: 2646883991111828531, guid: a9ecc5cc0022333488b11703be915afa,
-        type: 3}
-      propertyPath: oppEmo.Array.data[2]
-      value: 
-      objectReference: {fileID: 2800000, guid: 031571ef2086b2746859a94cff83b4dc, type: 3}
-    - target: {fileID: 2646883991111828531, guid: a9ecc5cc0022333488b11703be915afa,
-        type: 3}
-      propertyPath: oppEmo.Array.data[3]
-      value: 
-      objectReference: {fileID: 2800000, guid: ed11c806160284344acd7c55e0242f7d, type: 3}
     - target: {fileID: 2977112919753630050, guid: a9ecc5cc0022333488b11703be915afa,
         type: 3}
       propertyPath: m_Name
