@@ -14,9 +14,16 @@ public class PlayerHandler : MonoBehaviour
     private List<float> distances;
     private float minimundistance;
 
-    private Vector3 ownerDistance;
-    private Vector3 vasuliDistance;
-    private Vector3 NGODistance;
+    private float ownerDistance;
+    private float vasuliDistance;
+    private float NGODistance;
+    public GameObject gameownder;
+    public GameObject gamevasuli; 
+    public GameObject gamengo;
+
+    private Transform owndertrans;
+    private Transform vasulitrans;
+    private Transform ngotrans;
     
     public SpriteRenderer ground;
     
@@ -27,27 +34,27 @@ public class PlayerHandler : MonoBehaviour
     private float distanceWithowner = 20; 
     private float distanceWithvasuli = 20;
     private float distanceWithNGO = 20;
-    void Start()
+
+    private void Start()
     {
-        owner = (Owner)FindObjectsOfType(typeof(Owner))[0];
-        owner = owner.GetComponent<Owner>();
-        ngo = (NGO)FindObjectsOfType(typeof(NGO))[0];
-        ngo = ngo.GetComponent<NGO>();
-        vasuli = (Vasuli)FindObjectsOfType(typeof(Vasuli))[0];
-        vasuli = vasuli.GetComponent<Vasuli>();
+        owndertrans = gameownder.transform;
+        vasulitrans = gamevasuli.transform;
+        ngotrans = gamengo.transform;
+
     }
 
     void Update()
     {
-        var ownerDistance = owner.transform.position - gameObject.transform.position;
-        var vasuliDistance = vasuli.transform.position - gameObject.transform.position;
-        var NGODistance = ngo.transform.position - gameObject.transform.position;
-        float distanceWithowner = ownerDistance.magnitude;
-        float distanceWithvasuli = vasuliDistance.magnitude;
-        float distanceWithNGO = NGODistance.magnitude;
-        distances.Add(distanceWithowner);
-        distances.Add(distanceWithvasuli);
-        distances.Add(distanceWithNGO);
+        ownerDistance = owndertrans.position.x - gameObject.transform.position.x;
+        vasuliDistance = vasulitrans.position.x - gameObject.transform.position.x;
+        NGODistance = ngotrans.position.x - gameObject.transform.position.x;
+        // float distanceWithowner = ownerDistance.magnitude;
+        // float distanceWithvasuli = vasuliDistance.magnitude;
+        // float distanceWithNGO = NGODistance.magnitude;
+        Debug.Log(ownerDistance);
+        distances.Add(ownerDistance);
+        distances.Add(vasuliDistance);
+        distances.Add(NGODistance);
 
         minimundistance = distances.Min();
         Debug.Log("minimundistance " + minimundistance);

@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &710683515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4479966103438278275, guid: 7692303df99477e429b8a28cfcde0574,
+    type: 3}
+  m_PrefabInstance: {fileID: 5229294873222760410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &732431203
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +266,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &835443801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2775262463479679756, guid: 368d507a6c9239b42ba38f2a0464f7bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7776528300539077426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &968931357
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +373,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1549072856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616615329315165710, guid: 7ff25d2528714064988540a1b489b616,
+    type: 3}
+  m_PrefabInstance: {fileID: 568646078862839401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1610919700 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7796313335245209565, guid: 42f83ad71fa07c644a3e73d40546932a,
@@ -978,6 +996,21 @@ PrefabInstance:
       propertyPath: ground
       value: 
       objectReference: {fileID: 1610919700}
+    - target: {fileID: 5267913875205653310, guid: 815ae45c23b6a934bbcc79d949432420,
+        type: 3}
+      propertyPath: gamengo
+      value: 
+      objectReference: {fileID: 710683515}
+    - target: {fileID: 5267913875205653310, guid: 815ae45c23b6a934bbcc79d949432420,
+        type: 3}
+      propertyPath: gameownder
+      value: 
+      objectReference: {fileID: 835443801}
+    - target: {fileID: 5267913875205653310, guid: 815ae45c23b6a934bbcc79d949432420,
+        type: 3}
+      propertyPath: gamevasuli
+      value: 
+      objectReference: {fileID: 1549072856}
     - target: {fileID: 5267913875205653310, guid: 815ae45c23b6a934bbcc79d949432420,
         type: 3}
       propertyPath: dialogHandler
