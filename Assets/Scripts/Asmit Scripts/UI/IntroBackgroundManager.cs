@@ -26,6 +26,12 @@ public class IntroBackgroundManager : MonoBehaviour
             gameObject.transform.position.y + 0.5f, gameObject.transform.position.z);
     }
 
+    IEnumerator IntroEndingSlide()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(2);
+    }
+
     private void MoveIntroBackGround()
     {
         if (gameObject.transform.position.y == 3.5 || gameObject.transform.position.y == 1086 || gameObject.transform.position.y == 2161 )
@@ -34,7 +40,7 @@ public class IntroBackgroundManager : MonoBehaviour
         }
         else if(gameObject.transform.position.y == 3242)
         {
-            SceneManager.GetSceneByBuildIndex(2);
+            StartCoroutine(IntroEndingSlide());
         }
         else
         {
