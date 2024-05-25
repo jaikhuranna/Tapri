@@ -8,6 +8,7 @@ TagManager:
   - DialogBox
   - CharacterImage
   - CHI
+  - CUP
   layers:
   - Default
   - TransparentFX

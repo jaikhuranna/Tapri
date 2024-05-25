@@ -31,17 +31,13 @@ public class PlayerControl : MonoBehaviour
     
     // public Rigidbody playerRb;
 
-    public List<Transform> Teaslots = new List<Transform>();
     
     public float speed = 40.0f;
     public GameObject[] itemsInHand;
 
     private void Start()
     {
-       Teaslots.Add(teaSlot.transform);
-       Teaslots.Add(teaSlot1.transform);
-       Teaslots.Add(teaSlot2.transform);
-       
+        teaCup = GameObject.FindWithTag("CUP");
     }
 
     private void Update()

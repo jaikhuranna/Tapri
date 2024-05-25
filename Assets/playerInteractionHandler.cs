@@ -79,7 +79,7 @@ public class PlayerHandler : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         var currentInteractable = interactablesNPCs[Closestto()]; 
         CheckdistanceandStatus();
