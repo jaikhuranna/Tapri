@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,13 @@ public class PlayerHandler : MonoBehaviour
     public DialogHandler dialogHandler;
     public Owner owner;
     public SpriteRenderer ground;
+    
+    [SerializeField]private List<GameObject> interactableNPCs = new List<GameObject>();
 
     private bool canInteract = false;
     private bool canOverhear = false;
     private float distanceWith;
+    
     void Start()
     {
         owner = (Owner)FindObjectsOfType(typeof(Owner))[0];
@@ -42,6 +46,7 @@ public class PlayerHandler : MonoBehaviour
            canInteract = false;
            canOverhear = false;
            
+           // TODO: CLOSE OVERHEAR BUBBLE 
            dialogHandler.CloseDialog();
         }
         if (Input.GetKeyDown(KeyCode.Space) && i < 4 && canInteract == true)
