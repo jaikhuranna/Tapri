@@ -58,20 +58,22 @@ public class PlayerHandler : MonoBehaviour
 
     int Closestto()
     {
-        List<float> distances = new List<float>() { };
-        for (int i = 0; i < 3; i++)
-        {
-            Vector3 distance = transform.position - npcsLoactions[i];
-            distances.Add(Math.Abs(distance.magnitude));
-        }
-        int index = distances.IndexOf(distances.Min());
+        int index = Distances().IndexOf(Distances().Min());
     return index;
+    }
+
+    void CheckdistanceandStatus()
+    {
+        if (Distances().Min() > 6)
+        {
+            dialogHandler.CloseDialog();
+        }
     }
 
     void Update()
     {
         var currentInteractable = interactablesNPCs[Closestto()]; 
-        Debug.Log(interactablesNPCs[Closestto()]);
+        CheckdistanceandStatus();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (currentInteractable == ngodata && ngodata.i < 4)
@@ -95,7 +97,7 @@ public class PlayerHandler : MonoBehaviour
             else if (currentInteractable == vasulidata && vasulidata.i < 4)
             {
                 vasulidata.i++;
-                if (vasulidata.i >= 4)
+                if (vasulidata.i >= 4 )
                 {
                     dialogHandler.CloseDialog();
                 }
