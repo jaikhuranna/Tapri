@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class IntroBackgroundManager : MonoBehaviour
 {
     // Update is called once per frame
+    public GameObject curtains;
     // -536.5  546   
     private void Start()
     {
@@ -21,14 +22,15 @@ public class IntroBackgroundManager : MonoBehaviour
 
     IEnumerator IntroPause()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.2f);
         gameObject.transform.position = new Vector3(gameObject.transform.position.x,
             gameObject.transform.position.y + 0.5f, gameObject.transform.position.z);
     }
 
     IEnumerator IntroEndingSlide()
     {
-        yield return new WaitForSeconds(1.5f);
+        curtains.SetActive(true);
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(2);
     }
 

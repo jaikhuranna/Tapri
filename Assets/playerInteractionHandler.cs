@@ -88,7 +88,7 @@ public class PlayerHandler : MonoBehaviour
             {
                 playerdata.i++;
                 Debug.Log(playerdata.i);
-                if (playerdata.i == 3 )
+                if (playerdata.i == 5 )
                 {
                     dialogHandler.CloseDialog();
                     SceneManager.LoadScene(3);
