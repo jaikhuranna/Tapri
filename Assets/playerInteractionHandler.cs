@@ -8,8 +8,7 @@ using Object = System.Object;
 
 public class PlayerHandler : MonoBehaviour
 {
-    private int i = -1;
-    
+
     public DialogHandler dialogHandler;
     public GameObject ngo;
     public GameObject owner;
@@ -26,7 +25,7 @@ public class PlayerHandler : MonoBehaviour
     private Vector3 vasuliloc;
 
     private List<Vector3> npcsLoactions = new List<Vector3>();
-    private Object[] interactablesNPCs = new Object[] {};
+    private List<Object> interactablesNPCs = new List<Object>();
     private void Start()
     {
         ngodata = ngo.GetComponent<NGO>();
@@ -37,13 +36,24 @@ public class PlayerHandler : MonoBehaviour
         ownerloc = owner.transform.position;
         vasuliloc = vasuli.transform.position;
         
-        interactablesNPCs.Append(ngodata);
-        interactablesNPCs.Append(ownerdata);
-        interactablesNPCs.Append(vasulidata);
+        interactablesNPCs.Add(ngodata);
+        interactablesNPCs.Add(ownerdata);
+        interactablesNPCs.Add(vasulidata);
 
         npcsLoactions.Add(ngoloc);
         npcsLoactions.Add(ownerloc);
         npcsLoactions.Add(vasuliloc);
+    }
+
+    List<float> Distances()
+    {
+        List<float> distances = new List<float>() { };
+        for (int i = 0; i < 3; i++)
+        {
+            Vector3 distance = transform.position - npcsLoactions[i];
+            distances.Add(Math.Abs(distance.magnitude));
+        }
+        return distances;
     }
 
     int Closestto()
@@ -60,16 +70,37 @@ public class PlayerHandler : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Names[Closestto()]);
-        // Debug.Log(interactablesNPCs[Closestto()]);
-        if (Input.GetKeyDown(KeyCode.Space) && i < 4 )
+        var currentInteractable = interactablesNPCs[Closestto()]; 
+        Debug.Log(interactablesNPCs[Closestto()]);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            i++;
-            dialogHandler.Dialog(ngodata.dialogs[i], ngodata.charintexes[i], ngodata.emoindexes[i]);
-        }
-        else if (Input.GetKeyUp(KeyCode.Space) && i == 4)
-        {
-            dialogHandler.CloseDialog();        
+            if (currentInteractable == ngodata && ngodata.i < 4)
+            {
+                ngodata.i++;
+                if (ngodata.i >= 4)
+                {
+                    dialogHandler.CloseDialog();
+                }
+                dialogHandler.Dialog(ngodata.dialogs[ngodata.i], ngodata.charintexes[ngodata.i], ngodata.emoindexes[ngodata.i]);
+            }
+            else if (currentInteractable == ownerdata && ownerdata.i < 4)
+            {
+                ownerdata.i++;
+                if (ownerdata.i >= 4)
+                {
+                    dialogHandler.CloseDialog();
+                }
+                dialogHandler.Dialog(ownerdata.dialogs[ownerdata.i], ownerdata.charintexes[ownerdata.i], ownerdata.emoindexes[ownerdata.i]);
+            }
+            else if (currentInteractable == vasulidata && vasulidata.i < 4)
+            {
+                vasulidata.i++;
+                if (vasulidata.i >= 4)
+                {
+                    dialogHandler.CloseDialog();
+                }
+                dialogHandler.Dialog(vasulidata.dialogs[vasulidata.i], vasulidata.charintexes[vasulidata.i], vasulidata.emoindexes[vasulidata.i]);
+            }
         }
     }
 }
