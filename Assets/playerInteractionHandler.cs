@@ -30,7 +30,6 @@ public class PlayerHandler : MonoBehaviour
         vasuli = vasuli.GetComponent<Vasuli>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         var ownerDistance = owner.transform.position - gameObject.transform.position;
@@ -40,6 +39,7 @@ public class PlayerHandler : MonoBehaviour
         float distanceWithvasuli = vasuliDistance.magnitude;
         float distanceWithNGO = NGODistance.magnitude;
 
+        Debug.Log(distanceWithowner);
         distances.Add(distanceWithowner);
         distances.Add(distanceWithvasuli);
         distances.Add(distanceWithNGO);
