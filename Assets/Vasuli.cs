@@ -13,13 +13,19 @@ public class Vasuli : MonoBehaviour
     {
         //Level 1
         dialogs.Add("Where's your boss?");
+        dialogs.Add("Maa chudvane gaya h");
         dialogs.Add("Call him.");
+        dialogs.Add("");
         
 
+        charintexes.Add(1);
+        charintexes.Add(0);
         charintexes.Add(1);
         charintexes.Add(1);
         
 
+        emoindexes.Add(0);
+        emoindexes.Add(0);
         emoindexes.Add(0);
         emoindexes.Add(0);
         

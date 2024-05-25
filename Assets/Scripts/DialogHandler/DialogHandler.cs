@@ -35,7 +35,7 @@ public class DialogHandler : MonoBehaviour
         switch (characterIndex)
         {
             case 0:
-                characterName = "franklin";
+                characterName = "Player";
                 break;
             case 1:
                 characterName = "Vasuli";
