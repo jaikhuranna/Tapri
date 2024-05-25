@@ -76,28 +76,33 @@ public class PlayerHandler : MonoBehaviour
         CheckdistanceandStatus();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (currentInteractable == ngodata && ngodata.i < 4)
+            //NGO GUY
+            if (currentInteractable == ngodata && ngodata.i < 1)
             {
                 ngodata.i++;
-                if (ngodata.i >= 4)
+                if (ngodata.i >= 1)
                 {
                     dialogHandler.CloseDialog();
                 }
                 dialogHandler.Dialog(ngodata.dialogs[ngodata.i], ngodata.charintexes[ngodata.i], ngodata.emoindexes[ngodata.i]);
             }
-            else if (currentInteractable == ownerdata && ownerdata.i < 4)
+            
+            //OWNER DATA
+            else if (currentInteractable == ownerdata && ownerdata.i < 9)
             {
                 ownerdata.i++;
-                if (ownerdata.i >= 4)
+                if (ownerdata.i >= 9)
                 {
                     dialogHandler.CloseDialog();
                 }
                 dialogHandler.Dialog(ownerdata.dialogs[ownerdata.i], ownerdata.charintexes[ownerdata.i], ownerdata.emoindexes[ownerdata.i]);
             }
-            else if (currentInteractable == vasulidata && vasulidata.i < 4)
+            
+            //VASOOLI DATA
+            else if (currentInteractable == vasulidata && vasulidata.i < 2)
             {
                 vasulidata.i++;
-                if (vasulidata.i >= 4 )
+                if (vasulidata.i >= 2 )
                 {
                     dialogHandler.CloseDialog();
                 }
