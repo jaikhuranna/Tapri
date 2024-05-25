@@ -46,9 +46,6 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("table  " + isInFrontOfTable);
-        Debug.Log("table 1 " + isInFrontOfTable1);
-        Debug.Log("table 2 " + isInFrontOfTable2);
         float horizontal = Input.GetAxisRaw("Horizontal");
         Vector3 direction = new Vector3(horizontal, 0f, 0f);
         float horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
@@ -124,7 +121,6 @@ public class PlayerControl : MonoBehaviour
         }
         else if (isInFrontOfTable2 == true)
         {
-            Debug.Log(teaSlot2.transform.position);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 teaCup.transform.parent = teaSlot2.transform;
