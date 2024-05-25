@@ -11,22 +11,13 @@ public class NGO : MonoBehaviour
     public List<int> emoindexes = new List<int>();
     void Start()
     {
-        dialogs.Add("Man man i am NGO man");
-        dialogs.Add("I am relatively handsome");
-        dialogs.Add("mughe relatively ki spelling nahi ati h");
-        dialogs.Add("wow");
-        dialogs.Add("");
+        //Level 1
+        dialogs.Add("Could you take my order please?");
+        
 
-        charintexes.Add(0);
-        charintexes.Add(0);
-        charintexes.Add(0);
-        charintexes.Add(0);
-        charintexes.Add(0);
+        charintexes.Add(2);
 
-        emoindexes.Add(1);
-        emoindexes.Add(2);
-        emoindexes.Add(1);
-        emoindexes.Add(2);
+
         emoindexes.Add(1);
     }
 }

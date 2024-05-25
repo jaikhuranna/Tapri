@@ -11,23 +11,18 @@ public class Vasuli : MonoBehaviour
     public List<int> emoindexes = new List<int>();
     void Start()
     {
-        dialogs.Add("Man man i am vasuli man");
-        dialogs.Add("I am NOT relatively handsome");
-        dialogs.Add("Parso panvel nikalni h");
-        dialogs.Add("NOT WOW");
-        dialogs.Add("");
+        //Level 1
+        dialogs.Add("Where's your boss?");
+        dialogs.Add("Call him.");
+        
 
-        charintexes.Add(0);
-        charintexes.Add(0);
-        charintexes.Add(0);
-        charintexes.Add(0);
-        charintexes.Add(0);
+        charintexes.Add(1);
+        charintexes.Add(1);
+        
 
         emoindexes.Add(1);
         emoindexes.Add(2);
-        emoindexes.Add(1);
-        emoindexes.Add(2);
-        emoindexes.Add(1);
+        
     }
 
 }
