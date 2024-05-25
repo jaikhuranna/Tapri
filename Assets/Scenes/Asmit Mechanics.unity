@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -208,11 +208,6 @@ PrefabInstance:
       objectReference: {fileID: 594455888}
     - target: {fileID: 6615850583245796269, guid: 0c9b826d9da56974db3585163857f424,
         type: 3}
-      propertyPath: arm
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615850583245796269, guid: 0c9b826d9da56974db3585163857f424,
-        type: 3}
       propertyPath: parleG
       value: 
       objectReference: {fileID: 1763939463}
@@ -226,11 +221,6 @@ PrefabInstance:
       propertyPath: teaSlot
       value: 
       objectReference: {fileID: 1730288008}
-    - target: {fileID: 6615850583245796269, guid: 0c9b826d9da56974db3585163857f424,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 286005484}
     - target: {fileID: 6615850583245796269, guid: 0c9b826d9da56974db3585163857f424,
         type: 3}
       propertyPath: cameraObj
@@ -360,12 +350,6 @@ GameObject:
 --- !u!1 &286005483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4717448029804922311, guid: 0c9b826d9da56974db3585163857f424,
-    type: 3}
-  m_PrefabInstance: {fileID: 135363554}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &286005484 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2746737427721522169, guid: 0c9b826d9da56974db3585163857f424,
     type: 3}
   m_PrefabInstance: {fileID: 135363554}
   m_PrefabAsset: {fileID: 0}
