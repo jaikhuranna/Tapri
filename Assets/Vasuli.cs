@@ -28,7 +28,6 @@ public class Vasuli : MonoBehaviour
         emoindexes.Add(0);
         emoindexes.Add(0);
         emoindexes.Add(0);
-        
     }
 
 }

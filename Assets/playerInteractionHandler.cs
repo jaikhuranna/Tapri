@@ -3,27 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Object = System.Object;
 
 public class PlayerHandler : MonoBehaviour
 {
-
     public DialogHandler dialogHandler;
     public GameObject ngo;
     public GameObject owner;
     public GameObject vasuli;
+    public GameObject player;
 
-    private List<string> Names = new List<string>() {"Ngo", "Owner", "Vasuli"};
+    private List<string> Names = new List<string>() {"Ngo", "Owner", "Vasuli", ""};
     
     private NGO ngodata;
     private Owner ownerdata;
     private Vasuli vasulidata;
+    private Player playerdata;
 
     private Vector3 ngoloc;
     private Vector3 ownerloc;
     private Vector3 vasuliloc;
+    private Vector3 playerloc;
 
+    public bool PlayerMonologe = true;
     private List<Vector3> npcsLoactions = new List<Vector3>();
     private List<Object> interactablesNPCs = new List<Object>();
     private void Start()
@@ -31,24 +35,28 @@ public class PlayerHandler : MonoBehaviour
         ngodata = ngo.GetComponent<NGO>();
         ownerdata = owner.GetComponent<Owner>();
         vasulidata = vasuli.GetComponent<Vasuli>();
+        playerdata = player.GetComponent<Player>();
 
         ngoloc = ngo.transform.position;
         ownerloc = owner.transform.position;
         vasuliloc = vasuli.transform.position;
+        playerloc = player.transform.position;
         
         interactablesNPCs.Add(ngodata);
         interactablesNPCs.Add(ownerdata);
         interactablesNPCs.Add(vasulidata);
+        interactablesNPCs.Add(playerdata);
 
         npcsLoactions.Add(ngoloc);
         npcsLoactions.Add(ownerloc);
         npcsLoactions.Add(vasuliloc);
+        npcsLoactions.Add(playerloc);
     }
 
     List<float> Distances()
     {
         List<float> distances = new List<float>() { };
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             Vector3 distance = transform.position - npcsLoactions[i];
             distances.Add(Math.Abs(distance.magnitude));
@@ -76,7 +84,17 @@ public class PlayerHandler : MonoBehaviour
         CheckdistanceandStatus();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (currentInteractable == ngodata && ngodata.i < 4)
+            if (currentInteractable == playerdata && PlayerMonologe == true)
+            {
+                playerdata.i++;
+                Debug.Log(playerdata.i);
+                if (playerdata.i == 3 )
+                {
+                    dialogHandler.CloseDialog();
+                    SceneManager.LoadScene(3);
+                } 
+                dialogHandler.Dialog(playerdata.dialogs[playerdata.i], playerdata.charintexes[playerdata.i], playerdata.emoindexes[playerdata.i]); }
+            else if (currentInteractable == ngodata && ngodata.i < 4)
             {
                 ngodata.i++;
                 if (ngodata.i >= 4)
