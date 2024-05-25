@@ -13,13 +13,20 @@ public class PlayerHandler : MonoBehaviour
     public Vasuli vasuli;
     private List<float> distances;
     private float minimundistance;
+
+    private Vector3 ownerDistance;
+    private Vector3 vasuliDistance;
+    private Vector3 NGODistance;
     
     public SpriteRenderer ground;
     
     private bool canInteract = false;
     private bool canOverhear = false;
     private float distanceWith;
-    
+
+    private float distanceWithowner = 20; 
+    private float distanceWithvasuli = 20;
+    private float distanceWithNGO = 20;
     void Start()
     {
         owner = (Owner)FindObjectsOfType(typeof(Owner))[0];
@@ -38,10 +45,6 @@ public class PlayerHandler : MonoBehaviour
         float distanceWithowner = ownerDistance.magnitude;
         float distanceWithvasuli = vasuliDistance.magnitude;
         float distanceWithNGO = NGODistance.magnitude;
-
-        Debug.Log(distanceWithowner);
-        Debug.Log(distanceWithvasuli);
-        Debug.Log(distanceWithNGO);
         distances.Add(distanceWithowner);
         distances.Add(distanceWithvasuli);
         distances.Add(distanceWithNGO);
