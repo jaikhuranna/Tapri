@@ -40,6 +40,8 @@ public class PlayerHandler : MonoBehaviour
         float distanceWithNGO = NGODistance.magnitude;
 
         Debug.Log(distanceWithowner);
+        Debug.Log(distanceWithvasuli);
+        Debug.Log(distanceWithNGO);
         distances.Add(distanceWithowner);
         distances.Add(distanceWithvasuli);
         distances.Add(distanceWithNGO);
@@ -48,14 +50,14 @@ public class PlayerHandler : MonoBehaviour
         Debug.Log("minimundistance " + minimundistance);
         int indexofmax = distances.IndexOf(minimundistance);
 
-        if (minimundistance < 0.3)
+        if (minimundistance < 2.5)
         {
             ground.color = Color.red;
             canInteract = true;
            
             // TODO: ANIMATE CLOSE THE OVERHEAR PREFAB
         }
-        else if (0.3 < minimundistance && minimundistance < 1.4)
+        else if (2.5 < minimundistance && minimundistance < 15)
         {
             ground.color = Color.yellow;
             canOverhear = true;

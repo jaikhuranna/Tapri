@@ -33,22 +33,20 @@ public class PlayerControl : MonoBehaviour
     private void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical);
+        Vector3 direction = new Vector3(horizontal, 0f, 0f);
 
         if (direction.magnitude >= 0.1f)
         {
             controller.Move(direction * speed * Time.deltaTime);
         }
-        
         if (Input.GetKeyDown(KeyCode.A))
         {
-            gameObject.transform.rotation = new Quaternion(0, 0, 0,0 );
+            gameObject.transform.rotation = new Quaternion(0, 180, 0,0 );
 
         } 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            gameObject.transform.rotation = new Quaternion(0, 180, 0,0 );
+            gameObject.transform.rotation = new Quaternion(0, 0, 0,0 );
         }
 
         if (isInFrontOfStall == true)
