@@ -15,7 +15,6 @@ public class IntroBackgroundManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(gameObject.transform.position.y);
         MoveIntroBackGround();
     }
 
@@ -28,9 +27,13 @@ public class IntroBackgroundManager : MonoBehaviour
 
     private void MoveIntroBackGround()
     {
-        if (gameObject.transform.position.y == 3.5 || gameObject.transform.position.y == 1086 )
+        if (gameObject.transform.position.y == 3.5 || gameObject.transform.position.y == 1086 || gameObject.transform.position.y == 2161 )
         {
             StartCoroutine(IntroPause());
+        }
+        else if(gameObject.transform.position.y == 3242)
+        {
+            return;
         }
         else
         {

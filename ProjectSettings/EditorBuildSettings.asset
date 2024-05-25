@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Asmit UI.unity
     guid: 733db2155d4460e4f99a8c81ebb07800
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: b226c1ec3f07129498aa4827a838d5cf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jai.unity
     guid: 17819f5d2117438429253a5e470e55fb
   m_configObjects: {}
