@@ -15,7 +15,6 @@ public class Vasuli : MonoBehaviour
         dialogs.Add("Where's your boss?");//1
         dialogs.Add("He's probably in the back.");//P1
         dialogs.Add("Call him.");//2
-        dialogs.Add("");
         
 
         charintexes.Add(1);//1

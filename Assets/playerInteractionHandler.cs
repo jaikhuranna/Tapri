@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -94,32 +95,35 @@ public class PlayerHandler : MonoBehaviour
                     SceneManager.LoadScene(3);
                 } 
                 dialogHandler.Dialog(playerdata.dialogs[playerdata.i], playerdata.charintexes[playerdata.i], playerdata.emoindexes[playerdata.i]); }
-            else if (currentInteractable == ngodata && ngodata.i < 1)
+            else if (currentInteractable == ngodata && ngodata.i < 2)
             {
                 ngodata.i++;
-                if (ngodata.i >= 1)
+                if (ngodata.i >= 2)
                 {
                     dialogHandler.CloseDialog();
                 }
-                dialogHandler.Dialog(ngodata.dialogs[ngodata.i], ngodata.charintexes[ngodata.i], ngodata.emoindexes[ngodata.i]);
+                else
+                    dialogHandler.Dialog(ngodata.dialogs[ngodata.i], ngodata.charintexes[ngodata.i], ngodata.emoindexes[ngodata.i]);
             }
-            else if (currentInteractable == ownerdata && ownerdata.i < 9)
+            else if (currentInteractable == ownerdata && ownerdata.i < 10)
             {
                 ownerdata.i++;
-                if (ownerdata.i >= 9)
+                if (ownerdata.i >= 10)
                 {
                     dialogHandler.CloseDialog();
                 }
-                dialogHandler.Dialog(ownerdata.dialogs[ownerdata.i], ownerdata.charintexes[ownerdata.i], ownerdata.emoindexes[ownerdata.i]);
+                else
+                    dialogHandler.Dialog(ownerdata.dialogs[ownerdata.i], ownerdata.charintexes[ownerdata.i], ownerdata.emoindexes[ownerdata.i]);
             }
-            else if (currentInteractable == vasulidata && vasulidata.i < 2)
+            else if (currentInteractable == vasulidata && vasulidata.i < 3)
             {
                 vasulidata.i++;
-                if (vasulidata.i >= 2)
+                if (vasulidata.i >= 3)
                 {
                     dialogHandler.CloseDialog();
                 }
-                dialogHandler.Dialog(vasulidata.dialogs[vasulidata.i], vasulidata.charintexes[vasulidata.i], vasulidata.emoindexes[vasulidata.i]);
+                else
+                    dialogHandler.Dialog(vasulidata.dialogs[vasulidata.i], vasulidata.charintexes[vasulidata.i], vasulidata.emoindexes[vasulidata.i]);
             }
         }
     }

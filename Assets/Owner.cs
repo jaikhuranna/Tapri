@@ -25,7 +25,6 @@ public class Owner : MonoBehaviour
         dialogs.Add("You idiot!");//4
         dialogs.Add("I feel a sharp pain in my cheek as his hands leave their mark.");//Player5
         dialogs.Add("Get back to work! And tell him I'm not here!");//5
-        dialogs.Add("");
 
         charintexes.Add(3);//1
         charintexes.Add(0);//Player1

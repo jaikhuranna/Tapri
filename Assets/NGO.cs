@@ -14,7 +14,6 @@ public class NGO : MonoBehaviour
         //Level 1
         dialogs.Add("Could you take my order please?");//1
         dialogs.Add("I walk over to take his order. One cup of chai with extra ginger and sugar, and some rusk. I feel him slip a note into my pocket.");//P1
-        dialogs.Add("");
         
 
         charintexes.Add(2);//1
