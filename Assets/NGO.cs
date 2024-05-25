@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NGO : MonoBehaviour
 {
+    public int i = -1;
+    
     public List<string> dialogs = new List<string>();
     public List<int> charintexes = new List<int>();
     public List<int> emoindexes = new List<int>();

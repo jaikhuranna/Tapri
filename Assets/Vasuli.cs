@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Owner : MonoBehaviour
+public class Vasuli : MonoBehaviour
 {
     public int i = -1;
     
@@ -11,10 +11,10 @@ public class Owner : MonoBehaviour
     public List<int> emoindexes = new List<int>();
     void Start()
     {
-        dialogs.Add("Make");
-        dialogs.Add("How");
-        dialogs.Add("W");
-        dialogs.Add("idk");
+        dialogs.Add("Man man i am vasuli man");
+        dialogs.Add("I am NOT relatively handsome");
+        dialogs.Add("Parso panvel nikalni h");
+        dialogs.Add("NOT WOW");
         dialogs.Add("");
 
         charintexes.Add(0);
@@ -23,10 +23,11 @@ public class Owner : MonoBehaviour
         charintexes.Add(0);
         charintexes.Add(0);
 
+        emoindexes.Add(1);
         emoindexes.Add(2);
-        emoindexes.Add(0);
         emoindexes.Add(1);
-        emoindexes.Add(1);
+        emoindexes.Add(2);
         emoindexes.Add(1);
     }
+
 }
