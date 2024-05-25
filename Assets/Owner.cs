@@ -13,7 +13,9 @@ public class Owner : MonoBehaviour
         dialogs.Add("How");
         dialogs.Add("W");
         dialogs.Add("idk");
+        dialogs.Add("");
 
+        charintexes.Add(0);
         charintexes.Add(0);
         charintexes.Add(0);
         charintexes.Add(0);
@@ -21,6 +23,7 @@ public class Owner : MonoBehaviour
 
         emoindexes.Add(2);
         emoindexes.Add(0);
+        emoindexes.Add(1);
         emoindexes.Add(1);
         emoindexes.Add(1);
     }

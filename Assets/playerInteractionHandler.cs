@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHandler : MonoBehaviour
 {
-    public int i = 0;
+    public int i = -1;
     public DialogHandler dialogHandler;
     public Owner owner;
     void Start()
@@ -16,16 +16,12 @@ public class PlayerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.GetKeyDown(KeyCode.Space));
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && i < 4)
         {
-            Debug.Log(owner.dialogs[i]);
-            Debug.Log(owner.charintexes[i]);
-            Debug.Log(owner.emoindexes[i]);
+            i++;
             dialogHandler.Dialog(owner.dialogs[i], owner.charintexes[i], owner.emoindexes[i]);
-            i = i + 1;
         }
-        else if (i == 4)
+        else if (Input.GetKeyUp(KeyCode.Space) && i == 4)
         {
             dialogHandler.CloseDialog();        
         }
