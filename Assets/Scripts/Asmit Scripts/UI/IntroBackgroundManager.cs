@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroBackgroundManager : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class IntroBackgroundManager : MonoBehaviour
         }
         else if(gameObject.transform.position.y == 3242)
         {
-            return;
+            SceneManager.GetSceneByBuildIndex(2);
         }
         else
         {
