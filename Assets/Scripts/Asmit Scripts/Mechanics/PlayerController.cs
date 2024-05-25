@@ -13,6 +13,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject parleG;
     public GameObject parleGSlot;
     public GameObject arm;
+    public GameObject cameraObj;
+    
 
     public CharacterController controller;
     
@@ -42,6 +44,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             gameObject.transform.rotation = new Quaternion(0, 0, 0,0 );
+
         } 
         if (Input.GetKeyDown(KeyCode.D))
         {
