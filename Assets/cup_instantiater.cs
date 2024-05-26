@@ -18,7 +18,7 @@ public class cup_instantiater : MonoBehaviour
         if (cup.transform.position != gameObject.transform.position)
         {
             GameObject new_cup = Instantiate(cup, gameObject.transform);
-            new_cup.tag = "Untagged";
+            cup.tag = "no";
         }
     }
 }

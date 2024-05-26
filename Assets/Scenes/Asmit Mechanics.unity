@@ -1034,6 +1034,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6985106551229710, guid: 368d507a6c9239b42ba38f2a0464f7bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 65ec5817431bbb0479fe2fecaa78c6be,
+        type: 3}
+    - target: {fileID: 2002624155967839927, guid: 368d507a6c9239b42ba38f2a0464f7bf,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002624155967839927, guid: 368d507a6c9239b42ba38f2a0464f7bf,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002624155967839927, guid: 368d507a6c9239b42ba38f2a0464f7bf,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2002624155967839927, guid: 368d507a6c9239b42ba38f2a0464f7bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1083,6 +1103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002624155967839927, guid: 368d507a6c9239b42ba38f2a0464f7bf,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2775262463479679756, guid: 368d507a6c9239b42ba38f2a0464f7bf,
         type: 3}
@@ -1622,7 +1647,7 @@ Transform:
   m_GameObject: {fileID: 461144423}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.58, y: 0.97, z: 0.19}
+  m_LocalPosition: {x: 15.04, y: 0.5, z: -0.06999999}
   m_LocalScale: {x: 0.48, y: 0.48, z: 0.48}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1669,7 +1694,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 65ec5817431bbb0479fe2fecaa78c6be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f84fd86460b17e4494cb542fcf3e87c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1706,7 +1731,7 @@ Transform:
   m_GameObject: {fileID: 516211047}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.64, y: 1.02, z: 0.319}
+  m_LocalPosition: {x: 15.04, y: 0.5, z: 0.059000015}
   m_LocalScale: {x: 0.48, y: 0.48, z: 0.48}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1753,7 +1778,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 65ec5817431bbb0479fe2fecaa78c6be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f84fd86460b17e4494cb542fcf3e87c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1847,6 +1872,11 @@ PrefabInstance:
       propertyPath: ngoEmo.Array.data[3]
       value: 
       objectReference: {fileID: 2800000, guid: 5e4f54e5db879a444bd312136ae22841, type: 3}
+    - target: {fileID: 2646883991111828531, guid: a9ecc5cc0022333488b11703be915afa,
+        type: 3}
+      propertyPath: franklinEmo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2977112919753630050, guid: a9ecc5cc0022333488b11703be915afa,
         type: 3}
       propertyPath: m_Name
@@ -2538,6 +2568,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1023803013315134660, guid: 7ff25d2528714064988540a1b489b616,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5f84fd86460b17e4494cb542fcf3e87c,
+        type: 3}
+    - target: {fileID: 1775242519074538065, guid: 7ff25d2528714064988540a1b489b616,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775242519074538065, guid: 7ff25d2528714064988540a1b489b616,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775242519074538065, guid: 7ff25d2528714064988540a1b489b616,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1775242519074538065, guid: 7ff25d2528714064988540a1b489b616,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2588,10 +2639,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1775242519074538065, guid: 7ff25d2528714064988540a1b489b616,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8616615329315165710, guid: 7ff25d2528714064988540a1b489b616,
         type: 3}
       propertyPath: m_Name
       value: Vasuli
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616615329315165710, guid: 7ff25d2528714064988540a1b489b616,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2624,7 +2685,7 @@ Transform:
   m_GameObject: {fileID: 797037056}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.42, y: 0.97, z: 0.39}
+  m_LocalPosition: {x: 15.04, y: 0.5, z: 0.13}
   m_LocalScale: {x: 0.48, y: 0.48, z: 0.48}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2671,7 +2732,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 65ec5817431bbb0479fe2fecaa78c6be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f84fd86460b17e4494cb542fcf3e87c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -9,6 +9,7 @@ TagManager:
   - CharacterImage
   - CHI
   - CUP
+  - no
   layers:
   - Default
   - TransparentFX
